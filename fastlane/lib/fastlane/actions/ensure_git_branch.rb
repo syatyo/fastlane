@@ -35,7 +35,7 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :branch,
                                        env_name: "FL_ENSURE_GIT_BRANCH_NAME",
                                        description: "The branch that should be checked for. String that can be either the full name of the branch or a regex e.g. `^feature\/.*$` to match",
-                                       default_value: 'master')
+                                       default_value: 'main')
         ]
       end
 
@@ -49,7 +49,7 @@ module Fastlane
 
       def self.example_code
         [
-          "ensure_git_branch # defaults to `master` branch",
+          "ensure_git_branch # defaults to `main` branch",
           "ensure_git_branch(
             branch: 'develop'
           )"
